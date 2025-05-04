@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slágerlista</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+        .navbar-brand img {
+            width: 8rem;
+        }
+
+      
+
+        .main-content {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .footerize {
+            background-color: #0B212B;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footerize a {
+            color: #fff;
+        }
+
+        .footerize a:hover {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .footerize ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .footerize ul li:last-child {
+            margin-right: 0;
+        }
+
+        .btn-custom {
+            background-color: #e83e8c;
+            border-color: #e83e8c;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #c2255c;
+            border-color: #c2255c;
+        }
+
+        .btn-custom-outline {
+            color: #e83e8c; 
+            border-color: #e83e8c;
+            transition: color 0.3s ease;
+        }
+
+        .btn-custom-outline:hover {
+            color: #c2255c; 
+            border-color: #c2255c;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header class="heather">
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container">
+                <a href="#" class="navbargacica">
+                 
+				
+				<i></i>
+				 <i></i>
+                    <i></i>
+				<i></i>
+				 <i></i>
+                    <i></i>
+                    <h1> <img src="../img/logo.gif" alt="logo" style="width: 4rem;" > </h1>
+					
+					
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navbargation">
+                    <i class="fas fa-bars" style="color:#ffffff;"></i>
+                </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menu" class = "menuke">
+	
+
+        <ul class="navbar-nav" >
+            <li class="nav-item" > <a href="../index.html" class="nav-link">Főoldal</a></li> 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+            <li class="nav-item"><a href='../albumci/album.html'  class="nav-link">Albumok</a></li>
+            <li class="nav-item"><a href='../sajatlista/index.html'  class="nav-link">Saját lista</a></li>
+            <li class="nav-item"><a href='../havihallgatok/index.html'  class="nav-link">Havi Hallgatók</a></li>
+            <li class="nav-item"><a href='../bejelentkezes/logout.php'  class="nav-link">Kijelentkezés</a></li>
+
+			
+        </ul>
+    </div>
+	 </div>
+           
+        </nav>
+    </header>
+
+    <section class="section_titlebox d-flex align-items-center" data-aos="fade-down" data-aos-duration="1500">
+        <div class="section_background_overlay"></div>
+        <div class="container">
+            <div class="titlebox_inner text-center">
+                <h1 class="titlebox_title">Albumok</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="rolunk" data-aos="fade-down" data-aos-duration="1500">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="rolunk_kep">
+                        <img src="../img/67.jpg" class="img-fluid">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="rolunk_ize">
+                        <h4 class="aaaa text_dark">A slágerlistákról</h4>
+                        <h2 class="fontok text_dark mb_20">Billboard 100 és 200</h2>
+                        <p>a Billboard Hot 100 és a Billboard 200 olyan rangsorolási listák, amelyek az Egyesült Államokban a zenei ipar legújabb és legnépszerűbb megnyilvánulásait mutatják be. A Hot 100 a legnépszerűbb dalakat követi, figyelembe véve az eladásokat, a rádiólejátszást és a streamelést. A Billboard 200 pedig az eladások, a streamelés és a rádiólejátszás alapján sorolja fel az albumokat. Mindkét lista hetente frissül, és bemutatja a legfrissebb trendeket és a legnagyobb hatású előadókat az amerikai zenei piacán.
+    
+    
+</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="karrier">
+        <div class="cuki_filter"></div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-8 d-flex align-items-center">
+                    <div class="karrier_irasok">
+                        <h2 class="ckarrier_cimecske text-white mb_20" data-aos="fade-down" data-aos-duration="1500">Teszteld a tudásodat!</h2>
+                        <p class="cta_description text-white mb-0" data-aos="fade-down" data-aos-duration="1500">Játssz egy interaktív játékkal, és nézd meg, hogy mennyire ismered az előadók népszerűségét.</p>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 offset-lg-1 d-flex align-items-center">
+                    <div class="buttonk">
+                        <a href='../havihallgatok/index.html' class="btn btn_tema shadow-none" data-aos="fade-down" data-aos-duration="2000">Tovább a játékhoz<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="main-content">
+        <div class="container">
+            <h4 class="aaaa text_dark text-center" data-aos="fade-down" data-aos-duration="1500">200-as lista</h4>
+            <h2 class="fontok text_dark text-center mb_200" style="font-size: 40px;" data-aos="fade-down" data-aos-duration="1500">Albumok</h2> 
+            <form id="dateForm">
+                <label for="datum" class="aaaa" data-aos="fade-down" data-aos-duration="1500">Válassz hetet:</label>
+                <input type="date" id="datum" name="datum" class="aaaa szovegbox" required data-aos="fade-down" data-aos-duration="1500">
+                <input type="button" value="menjen" id="elkuld" onclick="fetchData()" class="btn btn_tema shadow-none kicsibb-btn" data-aos="fade-down" data-aos-duration="1500">
+                <input type="button" value="<" id="elozohet" class="btn btn_tema shadow-none slim-btn" data-aos="fade-down" data-aos-duration="1500"> 
+                <input type="button" value=">" id="kovihet" class="btn btn_tema shadow-none slim-btn" data-aos="fade-down" data-aos-duration="1500"> 
+                
+                <br><br>
+                <label for="eloado_heti_keres" class="aaaa" data-aos="fade-down" data-aos-duration="1500">Keresés előadóra:</label>
+                <input type="text" id="eloado_heti_keres" name="eloado_heti_keres" class="szovegbox" data-aos="fade-down" data-aos-duration="1500">
+                <button type="button" onclick="filterData()" class="btn btn_tema kicsibb-btn" data-aos="fade-down" data-aos-duration="1500">Szűrés</button>
+                <br><br>
+                <label for="album_keres" class="aaaa" data-aos="fade-down" data-aos-duration="1500">Keresés album névre:</label>
+                <input type="text" id="album_keres" name="album_keres" class="szovegbox" data-aos="fade-down" data-aos-duration="1500">
+                <button type="button" onclick="searchByAlbum()" class="btn btn_tema kicsibb-btn" data-aos="fade-down" data-aos-duration="1500">Keresés</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+
+    <footer class="footerize">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href="../">Főoldal</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../albumci/album.html'>Albumok</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../sajatlista/index.html'>Saját Lista</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../havihallgatok/index.html'>Havi Hallgatók</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../bejelentkezes/logout.php'>Kijelentkezés</a></h6>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-3 col-md-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span>06 31 666 2020</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="d-flex align-items-center">
+                        <i class="far fa-envelope mr-2"></i>
+                        <span>ugyfelszolgi@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li class="mr-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="./album.js"></script>
+    <script src="../script2.js"></script>
+
+
+    <script> //ezt majd berkaom fajlba csak megnzem hogy jo e
+        var mySwiper = new Swiper('.swiper', {
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 4,
+            spaceBetween: 20,
+            speed: 800,
+            navbargation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                780: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        });
+    </script>
+
+
+
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+    
+</body>
+</html>

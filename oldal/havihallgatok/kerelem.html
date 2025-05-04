@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kérelem beküldése</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<style>
+   
+    .navbar-brand img {
+        width: 8rem;
+    }
+
+  
+
+    
+    .main-content {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .main-content h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+
+    .footerize {
+        background-color: #0B212B;
+        color: #fff;
+        padding: 50px 0;
+    }
+
+    .footerize a {
+        color: #fff;
+    }
+
+    .footerize a:hover {
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    .footerize ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .footerize ul li:last-child {
+        margin-right: 0;
+    }
+
+    .btn-custom {
+        background-color: #e83e8c; 
+        border-color: #e83e8c;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #c2255c; 
+    }
+
+    .btn-custom-outline {
+        color: #e83e8c; /* Pink */
+        border-color: #e83e8c;
+        transition: color 0.3s ease;
+    }
+
+    .btn-custom-outline:hover {
+        color: #c2255c; 
+        border-color: #c2255c;
+    }
+    #elkuld {
+            width: 300px; 
+            padding: 10px; 
+            
+        }
+
+         .loginstyle {
+            padding: 80px; 
+            padding-left: 400px;
+        }
+</style>
+
+<body>
+
+    <header class="heather">
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container">
+                <a href="./" class="navbargacica">
+                 
+				
+				<i></i>
+				 <i></i>
+                    <i></i>
+				<i></i>
+				 <i></i>
+                    <i></i>
+                    <h1> <img src="../img/logo.gif" alt="logo" style="width: 4rem;" > </h1>
+					
+					
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navbargation">
+                    <i class="fas fa-bars" style="color:#ffffff;"></i>
+                </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menu" class = "menuke">
+	
+
+        <ul class="navbar-nav" >
+            
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+            
+            <li class="nav-item"><a href='../havihallgatok/index.html'  class="nav-link">Vissza</a></li>
+            <li class="nav-item"><a href='../bejelentkezes/logout.php'  class="nav-link">Kijelentkezés</a></li>
+
+			
+        </ul>
+    </div>
+	 </div>
+           
+        </nav>
+    </header>
+
+
+    <section class="section_titlebox d-flex align-items-center" data-aos="fade-down" data-aos-duration="1500">
+        <div class="section_background_overlay"></div>
+        <div class="container">
+            <div class="titlebox_inner text-center">
+                <h1 class="titlebox_title">Kérelem beküldése</h1>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <h1 class="aaaa text_dark text-center" data-aos="fade-down" data-aos-duration="1500">Kérelem indítása</h1>
+    
+
+
+    
+    <section class="loginstyle">
+        <div class="main">
+         <div class="container">
+         
+           <div class="row g-3">
+           
+            <div class="col-lg-4">
+                    <div class="cukielerhetzo">
+                        <div class="card mb-sm-3">
+                            <div class="card-body text-center">
+                                <i class="far fa-envelope fa-2x mb-2"></i>
+                                <h4 class="card-title">Küldj nekünk javaslatot!</h4>
+                                <p class="card-text">Ha szeretnéd hogy szerepeljen a kedvenc előadód a havi hallgató játékban</p>
+                                <p class="card-text">A neve kell és a spotify linkje</p>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                 <div class="col-lg-8">
+                 
+                 <div class="contact_form">
+                 
+                 <form action="includes/elerhetosegek.inc.php" method="post">
+                 <div class="row">
+                 <div class="col-lg-6">
+                    <form id="kerelemForm">
+                        <input type="text" id="nevecske" required class ="szovegbox" placeholder="Előadó neve..">
+                        <input type="text" id="linkecske" required class ="szovegbox" placeholder="Spotify link..">
+                        <input type="button" id="elkuld" value="Beküldés"  class = "btn btn_tema mt-2 shadow-none">
+                    </form>
+                                    
+                                </div>
+    
+           
+    
+            
+                
+                
+                
+                
+               
+            
+        
+        
+        
+        
+       
+          
+               
+    
+               
+                    
+                        
+                        
+                            
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+    </section>
+    
+    <footer class="footerize">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href="../">Főoldal</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../albumci/album.html'>Albumok</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../sajatlista/index.html'>Saját Lista</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../havihallgatok/index.html'>Havi Hallgatók</a></h6>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <h6><a href='../bejelentkezes/logout.php'>Kijelentkezés</a></h6>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-3 col-md-4">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span>06 31 666 2020</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="d-flex align-items-center">
+                        <i class="far fa-envelope mr-2"></i>
+                        <span>ugyfelszolgi@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li class="mr-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="kerelem.js"></script>
+    <script> 
+        var mySwiper = new Swiper('.swiper', {
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 4,
+            spaceBetween: 20,
+            speed: 800,
+            navbargation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                780: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+ 
+    <title>Saját lista</title>
+
+    <style>
+  
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; 
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #f7f7f7;
+}
+
+.responsive-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.cute-table th,
+.cute-table td {
+  border: 1px solid #dddddd;
+}
+
+
+@media screen and (max-width: 600px) {
+  .responsive-table {
+    overflow-x: auto;
+  }
+}
+
+
+
+
+.input-section {
+  position: relative;
+}
+
+.input-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #1f1f1f;
+  user-select: none;
+  letter-spacing: 0.1rem;
+}
+
+.input-textbox {
+  width: 250px;
+  height: 50px;
+  border-radius: 0;
+  display: block;
+  border: 1px solid #8f8888;
+  border-radius: 5px;
+  margin: 25px auto;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.submit-button,
+.start-button {
+  width: 150px;
+  height: 50px;
+
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+
+  cursor: pointer;
+  transition: background-color 300ms;
+  letter-spacing: 0.05rem;
+  user-select: none;
+}
+
+.start-button {
+  margin-top: 60px;
+  transition: background-color 300ms;
+  opacity: 1;
+}
+
+
+
+.initial-options {
+  height: 0;
+  margin-top: 40px;
+  transition: height 400ms, margin 400ms;
+}
+
+.options {
+  display: block;
+  height: auto;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.075rem;
+  color: #1f1f1f;
+}
+
+.start-button-initial {
+  height: 0;
+  transition: height 400ms;
+  font-family: inherit;
+  font-size: 1.25rem;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+  background-color: #e0e0e0;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: background-color 200ms;
+  letter-spacing: 0.05rem;
+  user-select: none;
+  opacity: 0;
+}
+
+.option {
+  position: relative;
+  line-height: 4ch;
+}
+
+.delete-button {
+  position: absolute;
+  left: 50%;
+  top: 140%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: rgb(9, 0, 87);
+}
+
+.sorter-description {
+  text-align: center;
+  margin: 40px 0;
+  letter-spacing: 0.1ch;
+  user-select: none;
+}
+
+.battle-header {
+  text-align: center;
+  margin-bottom: 5px;
+  letter-spacing: 0.1ch;
+  user-select: none;
+}
+
+.sorted-percent {
+  text-align: center;
+  letter-spacing: 0.1ch;
+  user-select: none;
+}
+
+.sorter-container {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  grid-template-columns: 180px 240px 180px;
+  grid-template-rows: 100px 100px;
+  margin: 30px 0 50px;
+}
+
+.sorter-button {
+  text-align: center;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 300ms;
+  user-select: none;
+}
+
+.sorter-button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.first-option {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column: 1;
+}
+
+.second-option {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column: 3;
+}
+
+.i-like-both-button {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.no-opinion-button {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.results-table {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  border-spacing: 0;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  overflow: hidden;
+  letter-spacing: 0.1ch;
+  user-select: none;
+}
+
+.results-table-cell {
+  border-bottom: 1px solid #1f1f1f;
+  padding: 2px 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.results-table .results-table-row:last-child > .results-table-cell {
+  border-bottom: none;
+}
+
+.results-table-rank {
+  padding: 2px 15px;
+  border-right: 1px solid #1f1f1f;
+}
+
+.results-table-header {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.navbar-brand img {
+            width: 8rem;
+        }
+
+        .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #1f0480;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.custom-select:focus {
+  outline: none;
+}
+
+.custom-select option {
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+
+.custom-select:hover {
+  cursor: pointer;
+}
+
+        .main-content {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+ 
+        .footerize {
+            background-color: #0B212B;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        .footerize a {
+            color: #fff;
+        }
+
+        .footerize a:hover {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .footerize ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .footerize ul li:last-child {
+            margin-right: 0;
+        }
+
+
+    </style>
+    </head>
+<body>
+  <header class="heather">
+    <nav class="navbar navbar-expand-md p-0">
+        <div class="container">
+            <a href="./" class="navbargacica">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <h1> <img src="../img/logo.gif" alt="logo" style="width: 4rem;" > </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navbargation">
+                <i class="fas fa-bars" style="color:#ffffff;"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a href="#" class="nav-link" onclick="navigateTo('index.html')">Főoldal</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('../albumci/album.html')">Albumok</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('../sajatlista/index.html')">Saját lista</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('../havihallgatok/index.html')">Havi Hallgatók</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" onclick="navigateTo('../bejelentkezes/logout.php')">Kijelentkezés</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+<section class="section_titlebox d-flex align-items-center" data-aos="fade-down" data-aos-duration="1000">
+  <div class="section_background_overlay"></div>
+  <div class="container">
+      <div class="titlebox_inner text-center">
+          <h1 class="titlebox_title">Saját listád</h1>
+      </div>
+  </div>
+</section>
+  <br>
+  <br>
+    <div class="container" data-container data-aos="fade-down" data-aos-duration="1000">
+    
+      <div class="input-section" name ="input-section" id ="input-section">
+        <div class="input-title"><h4 class = "aaaa text_dark mb_20">Válogató</h2></div>
+        <div class="input-title"><h2 class = "fontok text_dark mb_20">Add meg az elemeket:</h2></div>
+        <input type="text" class="input-textbox szovegbox" required data-input-textbox />
+        <input
+          type="button"
+          class="submit-button btn btn_tema shadow-none"
+          value="HOZZÁAD"
+          data-submit-button
+        />
+      </div>
+      <div class="initial-options" data-options-list id ="initial-options" name = "initial-options" ></div>
+      <input
+        type="button"
+        class="start-button-initial btn btn_tema shadow-none"
+        value="INDÍTÁS"
+        data-start-button
+      />
+
+
+    
+    </div>
+
+    <div class="container" >
+      <input type="text" id="listanevecske" class="input-texbox szovegbox" style="border: 1px solid #333; border-radius: 5px;" placeholder="Lista neve..">
+      <br>
+      <br>
+      <form action="" method="post">
+        <select name="sajatlista" id="sajatlista" class="custom-select aaaa">
+</select>
+      </form><br>
+      <input type="button" id="muti" value ="Mutasd!" class ="btn btn_tema shadow-none">
+  </div>
+
+    <div id = "eredm"></div>
+
+    <br>
+    <br>
+
+
+    <footer class="footerize">
+      <div class="container">
+          <div class="row justify-content-center text-center">
+              <div class="col-lg-2 col-md-2">
+                  <h6><a href="#" onclick="navigateTo('../')">Főoldal</a></h6>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                  <h6><a href="#" onclick="navigateTo('../albumci/album.html')">Albumok</a></h6>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                  <h6><a href="#" onclick="navigateTo('../sajatlista/index.html')">Saját Lista</a></h6>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                  <h6><a href="#" onclick="navigateTo('../havihallgatok/index.html')">Havi Hallgatók</a></h6>
+              </div>
+              <div class="col-lg-2 col-md-2">
+                  <h6><a href="#" onclick="navigateTo('../bejelentkezes/logout.php')">Kijelentkezés</a></h6>
+              </div>
+          </div>
+          <div class="row justify-content-center mt-4">
+              <div class="col-lg-3 col-md-4">
+                  <div class="d-flex align-items-center">
+                      <i class="fas fa-phone-alt mr-2"></i>
+                      <span>06 31 666 2020</span>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4">
+                  <div class="d-flex align-items-center">
+                      <i class="far fa-envelope mr-2"></i>
+                      <span>ugyfelszolgi@gmail.com</span>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center mt-4">
+              <ul class="list-unstyled d-flex justify-content-center">
+                  <li class="mr-3">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="mr-3">
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<script src="../sajatlista/cicus.js"></script>
+
+<script>
+  function navigateTo(url) {
+      window.location.href = url;
+  }
+</script>
+
+
+
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+
+  </body>
+</html>

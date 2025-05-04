@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #0f041d;
+
+
+    background-color: #ffffff;
+
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    
+    overflow-x: hidden;
+    z-index: 0;
+    position: relative;
+    
+}
+
+.renedezes {
+    min-height: 100vh;
+    background-image: url(../oldal/img/65.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.renedezes .irasok {
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.renedezes .irasok h1 {
+    font-size: 64px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.renedezes .irasok p {
+    font-size: 18px;
+    margin: 25px 0 45px;
+}
+
+.cuki_filter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #0B212B 0%, #13364d 100%);
+    opacity: 0.7;
+}
+
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    transition: all 0.2s ease-in;
+}
+
+.btn_tema {
+    color: #738895;
+    border-color: #0b212b;
+    background-color: #0b212b;
+}
+
+.btn_tema:hover {
+    border-color: #4B3939;
+    background-color: #4B3939;
+}
+
+.heather {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+}
+
+.heather .navbar .navbargacica h1 {
+    color: #afadad;
+   font-size: 70%;
+}
+
+
+.heather .navbar .navbargacica i {
+    color: #000000;
+    font-size: 12px;
+    padding-left: 6px;
+}
+
+.heather .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-right: 15px;
+    background-color: transparent;
+    position: relative;
+}
+
+.aaaa {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.slim-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.kicsibb-btn {
+    padding: 7px 10px;
+    font-size: 14px;
+}
+
+.nagyobbtext {
+    font-size: 400px; 
+}
+
+.szovegbox {
+    color: #666666;
+    padding: 12px 13px;
+    font-size: 15px;
+    height: auto;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    background: #fafafa;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.szovegbox:focus {
+    border: 1px solid #3c71d4;
+    background: #ffffff;
+    outline: none;
+}
+
+
+
+
+.table-header th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.section_titlebox {
+    min-height: 50vh;
+   background-color: #0B212B;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.section_titlebox .titlebox_inner {
+    position: relative;
+}
+
+.section_titlebox .titlebox_inner .titlebox_title {
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #f8c27b;
+    text-transform: capitalize;
+}
+
+.rolunk {
+    padding: 135px 0;
+}
+
+.rolunk .rolunk_kep {
+    margin: 6px 0;
+}
+
+.rolunk .rolunk_kep img {
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 40px 50px -20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 40px 50px -20px rgba(0, 0, 0, 0.35);
+
+    margin-left: auto;
+    
+}
+
+.rolunk .rolunk_ize {
+    margin: 1px 0;
+}
+
+.rolunk_kep img{
+
+    max-width: 70%;  
+height: 100%;  
+}
+
+.karrier {
+    padding: 80px 0;
+ 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.karrier .karrier_irasok,
+.karrier .buttonk {
+    margin: 15px 0;
+    position: relative;
+}
+
+
+.karrier .karrier_irasok .ckarrier_cimecske {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+.lathatatlan
+{
+    display: none;
+
+}
